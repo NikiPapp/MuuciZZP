@@ -1,11 +1,15 @@
 body {
-  box-sizing: border-box;
-  margin-bottom: 20px;
-  padding: 0;
-  color: #1c2625;
-  line-height: 1.6;
-  background-color: #f4f6f6;
-}
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    min-height: 100vh; 
+    color: #1c2625;
+    line-height: 1.6;
+    background-color: #f4f6f6;
+    display: flex;
+    flex-direction: column;
+  }
 .logo {
   max-height: 40px;
   width: auto;
@@ -27,11 +31,13 @@ body {
     padding: 50px;
     min-height: 400px; 
   } */
-footer {
-  padding: 10px;
-  bottom: 0;
-  width: 100%;
-}
+  footer {
+    padding: 10px;
+    background-color: #637e7a;
+    color: #1c2625;
+    text-align: center;
+    width: 100%;
+    margin-top: auto;  }
 #copy {
   text-align: center;
 }
