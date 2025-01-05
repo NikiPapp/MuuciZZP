@@ -1,15 +1,18 @@
 body {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    min-height: 100vh; 
-    color: #1c2625;
-    line-height: 1.6;
-    background-color: #f4f6f6;
-    display: flex;
-    flex-direction: column;
-  }
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  color: #1c2625;
+  line-height: 1.6;
+  background-color: #f4f6f6;
+  display: flex;
+  flex-direction: column;
+}
+content {
+  margin: 10px;
+}
 .logo {
   max-height: 40px;
   width: auto;
@@ -31,13 +34,14 @@ body {
     padding: 50px;
     min-height: 400px; 
   } */
-  footer {
-    padding: 10px;
-    background-color: #637e7a;
-    color: #1c2625;
-    text-align: center;
-    width: 100%;
-    margin-top: auto;  }
+footer {
+  padding: 10px;
+  background-color: #637e7a;
+  color: #1c2625;
+
+  width: 100%;
+  margin-top: auto;
+}
 #copy {
   text-align: center;
 }
@@ -117,6 +121,46 @@ button:hover {
   border-radius: 8px;
 }
 
+.galeria {
+  background-color: transparent !important;
+  border: none !important;
+}
+
+.galeria .carousel-control-prev-icon,
+.galeria .carousel-control-next-icon {
+  filter: invert(1);
+}
+#demo {
+  max-width: 80%; /* A carousel maximális szélessége 80% */
+  margin: 0 auto; /* Középre igazítás */
+}
+#photoCarousel {
+  width: 50%;
+  margin: auto;
+}
+.carousel-inner {
+  max-width: 100%;
+  overflow: hidden;
+}
+
+.carousel-item img {
+  object-fit: cover; /* Képek megfelelő kitöltése torzítás nélkül */
+  width: 100%; /* Kép szélességét 100%-ra állítja */
+  height: auto; /* Arányos magasság */
+  max-height: 400px; /* A kép maximális magassága 400px */
+}
+p {
+    font-size: 1.1em; /* Néhány pixellel nagyobb betűméret */
+    line-height: 1.8; /* Magasabb sorköz, hogy könnyebb legyen olvasni */
+    color: #495057; /* Finom szürke szín a szöveghez */
+    margin-bottom: 20px; /* További tér a bekezdések között */
+    text-align: justify; /* Igazított szöveg, hogy szebb legyen a szöveg elrendezése */
+    text-justify: inter-word; /* Kiegyenlítése a szavak között */
+  }
+  
+  p:last-child {
+    margin-bottom: 0; /* Az utolsó bekezdésnél eltávolítja az alsó margót */
+  }
 @media (max-width: 768px) {
   #project .image {
     order: 2;
