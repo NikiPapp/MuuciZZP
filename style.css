@@ -1,0 +1,140 @@
+body{
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    padding: 0;
+    color: #1C2625;
+    line-height: 1.6;
+}
+.logo {
+    max-height: 40px;
+    width: auto;
+  }
+  .nav_foot{
+    background-color: #637E7A;
+    color: #1C2625;
+  }
+  /* #hero {
+    background-color: #F4F6F6;
+    color: #1C2625;
+    height: 60vh; 
+    padding: 20px;
+  }
+  
+  #project {
+    background-color: #D1DBDA;
+    color: #1C2625;
+    padding: 50px;
+    min-height: 400px; 
+  } */
+  footer{
+    padding: 10px;
+    text-align: center;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+  }
+ 
+
+  #hero, #project, #about {
+    background-color: #F4F6F6;
+    color: #1C2625;
+    padding: 50px;
+    min-height: 400px;
+}
+
+#project {
+    background-color: #D1DBDA;
+}
+
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.text {
+    flex: 1;
+    padding-right: 20px;
+}
+
+.image {
+    flex: 1;
+    text-align: center;
+}
+
+.image img {
+    width: 100%;
+    max-width: 404px;
+    height: auto;
+    border-radius: 8px;
+}
+
+button {
+    background-color: #F89B29;
+    color: #1C2625;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+button:hover {
+    background-color: #E58921;
+}
+#project, #about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Kép balra, szöveg jobbra */
+    flex-wrap: wrap; /* Reszponzív elrendezés */
+}
+
+#project .text, #about .text {
+    order: 2; /* A szöveg a jobb oldalon lesz */
+    flex: 1; /* A szöveg kitölti a rendelkezésre álló helyet */
+    padding-left: 20px;
+}
+
+#project .image, #about .image {
+    order: 1; /* A kép bal oldalon lesz */
+    flex: 0 0 404px; /* Kép fix szélessége */
+}
+
+ .image img, #about .image img {
+    width: 100%; 
+    max-width: 404px; /* Kép maximális szélessége */
+    height: auto;
+    border-radius: 8px; /* Képek sarkainak lekerekítése */
+}
+
+/* Reszponzivitás: kisebb képernyőkön a szöveg és a kép egymás alá kerülnek */
+@media (max-width: 768px) {
+    #project, #about {
+        flex-direction: column; /* Egymás alá rendezzük a képet és szöveget */
+        align-items: center; /* Középre igazítjuk */
+    }
+
+    #project .text, #about .text {
+        padding-left: 0; /* A szöveg bal oldali margójának eltávolítása */
+        text-align: center; /* Középre igazítjuk a szöveget */
+    }
+
+    #project .image, #about .image {
+        margin-top: 20px; /* A kép és szöveg közötti távolság */
+   
+    }
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .text {
+        padding-right: 0;
+        text-align: center;
+    }
+
+    .image {
+        margin-top: 20px;
+    }
+}
