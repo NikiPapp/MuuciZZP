@@ -10,6 +10,7 @@ body {
   display: flex;
   flex-direction: column;
 }
+
 content {
   margin: 10px;
 }
@@ -45,19 +46,33 @@ footer {
 #copy {
   text-align: center;
 }
-
+section {
+    margin: 10px; /* Térköz a szekciók között */
+    border: 1px solid #d1dbda; /* Alsó szegély */
+  }
+  
+  #project {
+    background-color: #e8f0f0;
+  }
+  
+  #about {
+    background-color: #dfe7e7;
+  }
 #hero,
 #project,
-#about {
+#about, content {
   background-color: #f4f6f6;
   color: #1c2625;
   padding: 50px;
   min-height: 400px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5); 
+  
 }
 
 #project {
   background-color: #d1dbda;
 }
+
 
 .content {
   display: flex;
@@ -76,12 +91,12 @@ footer {
   text-align: center;
 }
 
-.image img {
+/* .image img {
   width: 100%;
   max-width: 404px;
   height: auto;
   border-radius: 8px;
-}
+} */
 
 button {
   background-color: #f89b29;
@@ -111,7 +126,7 @@ button:hover {
 
 #project .image {
   order: 1;
-  flex: 0 0 404px;
+  
 }
 
 .image img {
@@ -134,9 +149,27 @@ button:hover {
   max-width: 80%; /* A carousel maximális szélessége 80% */
   margin: 0 auto; /* Középre igazítás */
 }
+.content-section {
+  padding: 2rem;
+  margin: 0 auto;
+  max-width: 800px;
+  border: none;
+}
+
+.content-section h1,
+ h2 {
+  margin-bottom: 1rem;
+  color: #333;
+}
+
+.content-section p {
+  margin-bottom: 1rem;
+  color: #555;
+}
 #photoCarousel {
   width: 50%;
   margin: auto;
+  padding-bottom:10px ;
 }
 .carousel-inner {
   max-width: 100%;
@@ -161,11 +194,13 @@ p {
   p:last-child {
     margin-bottom: 0; /* Az utolsó bekezdésnél eltávolítja az alsó margót */
   }
+
 @media (max-width: 768px) {
-  #project .image {
-    order: 2;
-    flex: 0 0 404px;
-  }
+    #project .image {
+        order: 2;
+        flex: 1 1 auto; /* Rugalmas méret kisebb nézetben */
+        text-align: center; /* Kép igazítása középre */
+      }
 
   .content {
     flex-direction: column;
